@@ -18,9 +18,12 @@ npm install
 
 3. Connect your android device. A widely used method for this is [ADB](https://developer.android.com/tools/adb)
 
-4. Adjust the configuration file for your device
+4. Download the [APK](https://github.com/tarun3kumar/appium-tests/blob/master/sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk) file and add it to the folder './apps'
 
-5. Run tests locally
+5. Adjust the configuration file for your device
+
+
+6. Run tests locally
 ```sh
     npm run android.app
 ```

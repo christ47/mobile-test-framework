@@ -1,6 +1,5 @@
 import AppScreen from "../screenobjects/AppScreen.js";
 describe('App test cases for API Demo',()=>{
-
     it('should be able to access the wallpaper options', async ()=>{
         await AppScreen.clickAccessibilityTab()
         await AppScreen.clickActivityTab()
