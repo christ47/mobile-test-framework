@@ -8,4 +8,15 @@ describe('Test the preferences features', ()=>{
         await expect($("id:android:id/checkbox")).not.toBeChecked()
     })
 
+    it('should be able to edit the default value of the text field', async()=>{
+        await preferenceScreen.clickPreferenceTab()
+        await preferenceScreen.clickDefaultTab()
+        await preferenceScreen.clickTextArea()
+        await preferenceScreen.clearTextArea()
+        await preferenceScreen.typeInTextArea('Lions are my favourite animal')
+        await preferenceScreen.saveButtonOnTextArea()
+        await preferenceScreen.clickTextArea()
+        expect(preferenceScreen.preferenceTextBox).toHaveText('Lions are my favourite animal')
+})
+
 })
