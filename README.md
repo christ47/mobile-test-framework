@@ -23,3 +23,8 @@ npm install
 ```sh
     npm run android.app
 ```
+
+
+## Next Steps
+
+Seperate Locators in file

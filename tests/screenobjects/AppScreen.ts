@@ -1,5 +1,4 @@
 class AppScreen {
-
     async clickAccessibilityTab(){
         return await $("accessibility id:App").click()
     }
@@ -17,6 +16,20 @@ class AppScreen {
         .up({ button: 0 })
         .perform();
     }
+
+    async checkAbolishIRS(){
+        $("-android uiautomator:new UiSelector().resourceId(\"io.appium.android.apis:id/tasklist_finished\").instance(5)").click();        
+    }
+
+    async assertAboloishIrsTabIsChecked(){
+        await expect ($("-android uiautomator:new UiSelector().resourceId(\"io.appium.android.apis:id/tasklist_finished\").instance(5)")).not.toBeChecked()        
+    }
+
+    async clickAccessibilityNodeQueryingTab(){
+        await $("accessibility id:Accessibility Node Querying").click();        
+    }
 }
+
+
 
 export default new AppScreen()
